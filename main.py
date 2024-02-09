@@ -44,6 +44,6 @@ docsearch = FAISS.from_texts(texts, embeddings)
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 chain = load_qa_chain(OpenAI(), chain_type="stuff")
-query = "who are the authors of the article?"
+query = "who is the principal of GECT?"
 docs = docsearch.similarity_search(query)
 chain.run(input_documents=docs, question=query)
